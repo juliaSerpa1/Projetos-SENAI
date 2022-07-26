@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="scripts/index.js"></script>
+    <script defer src="scripts/owl/jquery.min.js"></script>
+    <script defer src="scripts/owl/owl.carousel.min.js"></script>
+    <script defer src="scripts/owl/config-index.js"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="/">
+                <h1>A Game Mania</h1>
+            </a>
+            <div class="opcoes">
+                <p class="pt">Português(BR) - BRL</p>
+                <a href="../cadastro" class="signup">Cadastar-se</a>
+                <p class="separador">|</p>
+                <a href="#modal"><img src="img/login.png" alt="Logar"></a>
+                <a href=""><img src="img/carrinho.png" alt="Carrinho"></a>
+            </div>
+        </nav>
+        <div class="menu-bar">
+            <ul>
+                <li>
+                    <a href="../sobre-nos">A SetupGamer</a>
+                </li>
+                <li>
+                    <a href="../pc's-gamer">Pc's gamers</a>
+                </li>
+                <li>
+                    <a href="../workstation">WorkStation</a>
+                </li>
+                <li>
+                    <a href="../pc's-office">Pc's office</a>
+                </li>
+                <li>
+                    <a href="../pecas">Peças</a>
+                </li>
+                <li>
+                    <a href="../monte-seu-pc">Monte seu pc</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Carousel -->
+
+    <section class="carousel">
+        <div data-js="carousel__item" class="carousel__item carousel__item--visible">
+            <img src="https://i.postimg.cc/dtmJh3BJ/blackfriday  " />
+        </div>
+
+        <div data-js="carousel__item" class="carousel__item">
+            <img src="https://i.postimg.cc/K4Xh1SKk/Premios-1400x636-1-t0gn-VG4.png" />
+        </div>
+
+        <div data-js="carousel__item" class="carousel__item">
+            <img src="https://i.postimg.cc/900yrs3h/ec463c3f739eb87926189cae5cfd0543.jpg" />
+        </div>
+
+        <div class="carousel__actions">
+            <button data-js="carousel__button--prev" aria-label="Slide anterior">
+                < </button>
+
+                    <button data-js="carousel__button--next" aria-label="Próximo slide">
+                        >
+                    </button>
+        </div>
+    </section>
+
+    <!--Procurar-->
+
+    <form action="">
+        <div class="search">
+            <input type="text" placeholder="O que você procura?" />
+            <button type="submit">
+                <img src="img/lupa.png" alt="Buscar" />
+            </button>
+        </div>
+    </form>
+
+    <!--Categorias-->
+
+    <section class="categories">
+        <h2>Categorias</h2>
+        <div class="container1">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <span class="stars"></span>
+                        <h2 class="card-1">Procurando algo novo?</h2>
+                        <p class="card-1">
+                            Venha dar uma conferida em nossos produtos de lançamentos.
+                        </p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Novidades</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <span class="stars"></span>
+                        <h2 class="card-2">
+                            Quer saber quais os produtos que a galera mais compra?
+                        </h2>
+                        <p class="card-2">
+                            Aqui você encontrará a lista dos mais vendidos pela
+                            SetupGamer.
+                        </p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Mais comprados</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <span class="stars"></span>
+                        <h2 class="card-3">
+                            Quer deixar seu Setup ainda mais elegante e profissional?
+                        </h2>
+                        <p class="card-3">
+                            Confira os acessórios que a SetupGamer tem para você.
+                        </p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Acessórios</h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="face face1">
+                    <div class="content">
+                        <span class="stars"></span>
+                        <h2 class="card-4">
+                            Querendo encontrar alguma máquina mais em conta?
+                        </h2>
+                        <p class="card-4">Conheça nossos Pc´s mais baratos.</p>
+                    </div>
+                </div>
+                <div class="face face2">
+                    <h2>Economicos</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Carrossel de produtos-->
+
+    <section class="carrossel-filmes">
+        <h2>Escolha o PC que mais combina com você</h2>
+        <div class="owl-carousel owl-theme">
+            <div class="item">
+                <img src="img/produtos/gabinete1.jpg" alt="" />
+                <h3>Nome do kit</h3>
+                <button>Ver detalhes</button>
+            </div>
+            <div class="item">
+                <img src="img/produtos/gabinete2.jpg" alt="" />
+                <h3>Nome do kit</h3>
+                <button>Ver detalhes</button>
+            </div>
+            <div class="item">
+                <img src="img/produtos/gabinete3.jpg" alt="" />
+                <h3>Nome do kit</h3>
+                <button>Ver detalhes</button>
+            </div>
+            <div class="item">
+                <img src="img/produtos/gabinete4.jpg" alt="" />
+                <h3>Nome do kit</h3>
+                <button>Ver detalhes</button>
+            </div>
+            <div class="item">
+                <img src="img/produtos/gabinete5.jpg" alt="" />
+                <h3>Nome do kit</h3>
+                <button>Ver detalhes</button>
+            </div>
+        </div>
+    </section>
+    
+    <!---Video-->
+    <section class="video">
+        <h2>Veja como nós preparamos o seu PC</h2>
+        <div class="container">
+            <iframe src="https://www.youtube.com/embed/RNQvBeh1G2o" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!---Midias sociais-->
+    <section class="midias-sociais">
+        <h2>Nos siga nas redes sociais</h2>
+        <div>
+            <a href="#"><i class="fab fa-facebook"></i></i></a>
+            <a href="#"><i class="fab fa-twitter-square"></i></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+</body>
+
+</html>
