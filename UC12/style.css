@@ -13,12 +13,8 @@ body{
 a{
     text-decoration: none;
 }
-h1{
+h2{
     color:#43C822;
-}
-li{
-    text-decoration: none;
-    list-style-type: none;
 }
 header {
     position: sticky;
@@ -35,6 +31,12 @@ nav {
     justify-content: space-between;
     background-color: #242424;
 }
+header nav img {
+    height: 3vh;
+    margin-left: 5px;
+    position: relative;
+    cursor: pointer;
+}
 header nav p.pt{
     margin-right: 2vw;
     font-size: 1.6vh;
@@ -47,13 +49,10 @@ header nav p.separador{
     opacity: 0.5;
     height: 45px;
 }
-
-header nav img {
-    height: 3vh;
-    margin-left: 5px;
-    position: relative;
-    cursor: pointer;
+.navbar{
+    color: #35C910;
 }
+
 .opcoes{
     display: flex;
     align-items: center;
@@ -78,6 +77,9 @@ header nav img {
     color: white;
     border-color: #1e7209d8;
 }
+
+/*********** Menu Bar ***********/  
+
 div.menu-bar ul {
     display: flex;
     justify-content: space-evenly;
@@ -85,7 +87,24 @@ div.menu-bar ul {
     padding: 0;
     background-color: rgb(87, 87, 87);
     box-shadow: 0px 4px 10px rgb(0, 0, 0);
-    color: #242424;
+}
+  
+div.menu-bar ul li {
+    display: inline-block;
+}
+  
+div.menu-bar ul li a {
+    padding: 1vw;
+    color: white;
+    font-size: 2vh;
+    text-decoration: none;
+    display: block;
+}
+  
+div.menu-bar ul li a:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0), inset 0 0 1px rgba(0, 0, 0, 0.877);
+    background: rgba(34, 34, 34, 0.993);
+    color: #35C910
 }
 
 /* Carousel */
@@ -199,7 +218,7 @@ div.menu-bar ul {
     text-align: center;
 }
 
-.container1, .container2 {
+.container, .container{
     max-width: 100vw;
     display: flex;
     justify-content: center;
@@ -295,63 +314,36 @@ div.menu-bar ul {
 }
 
 /*********** Carrossel de produtos ***********/
-.carrossel-filmes h2 {
-    color: #fff;
-    font-size: 1.7em;
-    text-align: center;
-}
-
-.carrossel-filmes {
-    margin: 13vh 20.7%;
-}
-.owl{
+.cards-wrapper{
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    color: #ffff;
 }
-
-.carrossel-filmes .item {
-    height: 100%;
-    width: 100%;
-    margin-top: 3vh;
-    margin-bottom: 1vh;
-    box-shadow: 0px 0px 10px 0px black;
+.card{
+    margin: 0 .5rem;
+    border-color: #242424 !important;
 }
-.carrossel-filmes .item img{
-    width: 30vh;
+.card-body{
+    background-color: #242424
 }
-.carrossel-filmes .item h3 {
-    margin: 0;
-    background-color: #4e4e4eaf;
-    text-align: center;
-    color: white;
-}
-
-.carrossel-filmes .item button {
-    background-color: #35c910;
-    text-align: center;
-    color: white;
-    width: 100%;
-    border: none;
-    cursor: pointer;
+.btn{
+    background-color: #35C910 !important;
+    border-color: #35C910 !important;
+    color: #000 !important;
 }
 
 /*********** Video ***********/
-.video h2 {
-    color: white;
-    font-size: 1.7em;
-}
-
 section.video {
+    color: white;
+    margin: 40vh;
+}
+.meio{
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    margin-bottom: 15vh;
 }
-
-.video iframe {
-    height: 25rem;
-    width: 35rem;
+.meio iframe{
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.719);
 }
 
 /*********** Midias sociais ***********/
@@ -371,16 +363,16 @@ section.midias-sociais a {
     background-color: white;
     padding: 7vh 7vw;
     box-shadow: 0px 0px 10px 0px black;
-}
-
-section.midias-sociais div {
-    margin-top: 6vh;
-}
-
-section.midias-sociais i {
     color: black;
     font-size: 5vh;
     vertical-align: middle;
+}
+section.midias-sociais a img{
+    width: 5rem;
+    height: 5rem;
+}
+section.midias-sociais div {
+    margin-top: 6vh;
 }
 
 section.midias-sociais a:hover {
@@ -507,4 +499,4 @@ footer a {
     footer img.logo-footer {
         width: 8rem;
     }
-}
+} 
