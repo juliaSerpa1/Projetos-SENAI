@@ -6,12 +6,16 @@ function verificacao(){
     var login = document.getElementById('login').value
     var senha = document.getElementById('senha').value
 
-    if(login =="admin" && senha == "admin"){
+    if(login.value =="admin" && senha.value == "admin"){
+        document.getElementById("sucesso").style.display='none';
+        document.getElementById("incorreto").style.display='block';
+    }else{
         document.getElementById("sucesso").style.display='block';
+        document.getElementById("incorreto").style.display='none';
     }
 }
 
-        
+// module.exports = verificacao;     
     
 
 

@@ -409,3 +409,6 @@ footer a {
         width: 8rem;
     }
 } 
+.alert{
+    margin-bottom: 0 !important;
+}
