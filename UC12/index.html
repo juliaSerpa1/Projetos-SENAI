@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script defer src="scripts/index.js"></script>
+    <script defer src="/scripts/index.js"></script>
     <script defer src="scripts/owl/jquery.min.js"></script>
     <script defer src="scripts/owl/owl.carousel.min.js"></script>
     <script defer src="scripts/owl/config-index.js"></script>
@@ -30,9 +30,9 @@
                 </a>
                 <div class="opcoes">
                     <p class="pt">Português(BR) - BRL</p>
-                    <a href="../cadastro" class="signup">Cadastar-se</a>
+                    <button class="signup" data-bs-toggle="modal" data-bs-target="#exampleModal">Cadastar-se</button>
                     <p class="separador">|</p>
-                    <a href="#modal"><img src="img/login.png" alt="Logar"></a>
+                    <a data-bs-toggle="modal" data-bs-target="#modalLogin"><img src="img/login.png" alt="Login"></a>
                     <a href=""><img src="img/carrinho.png" alt="Carrinho"></a>
                 </div>
             </div>
@@ -61,6 +61,71 @@
         </div>
     </header>
 
+    <!-- Modal Cadastro-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cadastro</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div className="form-floating">
+                        <label for="floatingInput">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="nome" />
+                    </div>
+                    <div className="form-floating">
+                        <label for="floatingInput">Sobrenome</label>
+                        <input type="text" class="form-control" id="sobrenome" placeholder="sobrenome" />
+                    </div>
+                    <div className="form-floating">
+                        <label for="floatingInput">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com" />
+                    </div>
+                    <div className="form-floating">
+                        <label for="floatingInput">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="senha" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    <button type="submit" class="btn-custon btn-primary">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Login-->
+    <div class="modal fade" id="modalLogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div className="form-floating">
+                        <label for="floatingInput">Login</label>
+                        <input type="text" class="form-control" id="login" placeholder="login" />
+                    </div>
+                    <div className="form-floating">
+                        <label for="floatingInput">Senha</label>
+                        <input type="password" class="form-control" id="senha" placeholder="senha" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+                    <button data-toggle="button" onclick="verificacao()" type="submit" class="btn-custon btn-primary active" role="button" aria-pressed="true">Enviar</button>
+                </div>
+                <div style="display: none" id="sucesso" class="alert alert-success" role="alert">
+                    Logado com suceso!
+                </div>
+                <div style="display: none" id="incorreto" class="alert alert-danger" role="alert">
+                    Credenciais incorretas!
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Carousel -->
 
     <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
@@ -123,150 +188,79 @@
 
     <!--Categorias-->
 
-    <section class="categories">
-        <h2>Categorias</h2>
-        <di
-        v class="container">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <span class="stars"></span>
-                        <h2 class="card-1">Procurando algo novo?</h2>
-                        <p class="card-1">
-                            Venha dar uma conferida em nossos produtos de lançamentos.
-                        </p>
+    <!--Carrossel de produtos-->
+    <section>
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="cards-wrapper">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/produtos/gabinete1.jpg" alt="" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make .</p>
+                                <a href="#" class="btn-custon btn-primary rounded-pill">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/produtos/gabinete2.jpg" alt="" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make.</p>
+                                <a href="#" class="btn-custon btn-primary rounded-pill">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/produtos/gabinete3.jpg" alt="" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make.</p>
+                                <a href="#" class="btn-custon btn-primary rounded-pill">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="face face2">
-                    <h2>Novidades</h2>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <span class="stars"></span>
-                        <h2 class="card-2">
-                            Quer saber quais os produtos que a galera mais compra?
-                        </h2>
-                        <p class="card-2">
-                            Aqui você encontrará a lista dos mais vendidos pela
-                            SetupGamer.
-                        </p>
+                <div class="carousel-item">
+                    <div div class="cards-wrapper">
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/produtos/gabinete4.jpg" alt="" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make .</p>
+                                <a href="#" class="btn-custon btn-primary rounded-pill">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/produtos/gabinete5.jpg " alt="" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make.</p>
+                                <a href="#" class="btn-custon btn-primary rounded-pill">Go somewhere</a>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img src="img/produtos/gabinete3.jpg" alt="" />
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make.</p>
+                                <a href="#" class="btn-custon btn-primary rounded-pill">Go somewhere</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="face face2">
-                    <h2>Mais comprados</h2>
-                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <span class="stars"></span>
-                        <h2 class="card-3">
-                            Quer deixar seu Setup ainda mais elegante e profissional?
-                        </h2>
-                        <p class="card-3">
-                            Confira os acessórios que a SetupGamer tem para você.
-                        </p>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>Acessórios</h2>
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <span class="stars"></span>
-                        <h2 class="card-4">
-                            Querendo encontrar alguma máquina mais em conta?
-                        </h2>
-                        <p class="card-4">Conheça nossos Pc´s mais baratos.</p>
-                    </div>
-                </div>
-                <div class="face face2">
-                    <h2>Economicos</h2>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
     </section>
-
-    <!--Carrossel de produtos-->
-
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="cards-wrapper">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/produtos/gabinete1.jpg" alt="" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make .</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/produtos/gabinete2.jpg" alt="" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make.</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/produtos/gabinete3.jpg" alt="" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make.</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <div div class="cards-wrapper">
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/produtos/gabinete4.jpg" alt="" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make .</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/produtos/gabinete5.jpg " alt="" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make.</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img src="img/produtos/gabinete3.jpg" alt="" />
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make.</p>
-                            <a href="#" class="btn btn-primary rounded-pill">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
 
     <!---Video-->
     <section class="video">
