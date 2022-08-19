@@ -1,0 +1,403 @@
+
+a{
+    text-decoration: none;
+}
+h2{
+    color:#43C822;
+}
+header {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+nav {
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #242424;
+}
+header nav img {
+    height: 3vh;
+    margin-left: 5px;
+    position: relative;
+    cursor: pointer;
+}
+header nav p.pt{
+    margin-right: 2vw;
+    font-size: 1.6vh;
+    color: #4e4e4eaf;
+}
+
+header nav p.separador{
+    color: #35C910;
+    font-size: 34px;
+    opacity: 0.5;
+    height: 45px;
+}
+.navbar{
+    color: #35C910;
+}
+
+.opcoes{
+    display: flex;
+    align-items: center;
+    justify-items: end;
+    color: #242424;
+}
+.signup{
+    background-color: #35c910;
+    margin-right: 5px;
+    padding: 2px 0.5vw;
+    color: black;
+    font-size: 1.6vh;
+    text-decoration: none;
+    border: solid #35c910;
+    border-radius: 11px;
+    border-width: thin;
+    cursor: pointer;
+}
+
+.signup:hover, .footer-enviar:hover {
+    background-color: #1e7209d7;
+    color: white;
+    border-color: #1e7209d8;
+}
+.modal-header{
+    background-color:#242424;
+    color: #fff;
+}
+.modal-body{
+    background-color:#242424;
+    border-color: #242424 !important;
+    color: #fff;
+}
+.modal-footer{
+    background-color: #242424 !important;
+}
+
+
+/*********** Menu Bar ***********/  
+
+div.menu-bar ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(87, 87, 87);
+    box-shadow: 0px 4px 10px rgb(0, 0, 0);
+}
+  
+div.menu-bar ul li {
+    display: inline-block;
+}
+  
+div.menu-bar ul li a {
+    padding: 1vw;
+    color: white;
+    font-size: 2vh;
+    text-decoration: none;
+    display: block;
+}
+  
+div.menu-bar ul li a:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0), inset 0 0 1px rgba(0, 0, 0, 0.877);
+    background: rgba(34, 34, 34, 0.993);
+    color: #35C910
+}
+
+/* Carousel */
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 5vh;
+}
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+    display: none;
+}
+
+.carousel .carousel__item img {
+    width: 100%;
+    height: 86vh;
+}
+
+.carousel .carousel__item--visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+}
+
+.carousel .carousel__actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel__actions button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 4vh;
+    color: rgb(138, 138, 138);
+    transition: 0.4s;
+}
+
+.carousel .carousel__actions button:hover {
+    color: white;
+}
+
+.carousel .carousel__actions button[data-js="carousel__button--prev"] {
+    margin-left: 8vw;
+}
+
+.carousel .carousel__actions button[data-js="carousel__button--next"] {
+    margin-right: 8vw;
+}
+
+@keyframes fadeVisibility {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: opacity linear;
+    }
+}
+/*********** Buscar ***********/
+.search {
+    display: flex;
+    margin-left: 28.5%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    width: 40vw;
+    border-bottom: 1px solid #35c910;
+}
+
+.search input {
+    background: none;
+    width: 96%;
+    border: none;
+    color: white;
+    font-size: 1.8vh;
+}
+
+.search input:focus {
+    outline: 0;
+}
+
+.search button {
+    background: none;
+    border: none;
+}
+
+.search img {
+    height: 3vh;
+    cursor: pointer;
+}
+
+.search input::placeholder {
+    color: white;
+}
+/*********** Categorias ***********/
+
+
+/*********** Carrossel de produtos ***********/
+.cards-wrapper{
+    display: flex;
+    justify-content: center;
+    color: #ffff;
+}
+.card{
+    margin: 0 .5rem;
+    border-color: #242424 !important;
+}
+.card-body{
+    background-color: #242424
+}
+.btn-custon{
+    background-color: #35C910 !important;
+    border-color: #35C910 !important;
+    color: #000 !important;
+    padding: 8px !important;
+    text-decoration: none !important;
+}
+
+/*********** Video ***********/
+section.video {
+    color: white;
+    margin: 40vh;
+}
+.meio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.meio iframe{
+    box-shadow: 0px 4px 4px 4px rgba(0, 0, 0, 0.719);
+}
+
+/*********** Midias sociais ***********/
+.midias-sociais h2 {
+    color: white;
+    font-size: 1.7em;
+}
+
+section.midias-sociais {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15vh;
+}
+
+section.midias-sociais a {
+    background-color: white;
+    padding: 7vh 7vw;
+    box-shadow: 0px 0px 10px 0px black;
+    color: black;
+    font-size: 5vh;
+    vertical-align: middle;
+}
+section.midias-sociais a img{
+    width: 5rem;
+    height: 5rem;
+}
+section.midias-sociais div {
+    margin-top: 6vh;
+}
+
+section.midias-sociais a:hover {
+    background-color: #35C910;
+}
+
+/*********** media ***********/
+@media (max-width: 530px) {
+    .card .face.face2 {
+        height: 5vh;
+    }
+}
+
+@media (max-width: 564px) {
+    .video iframe {
+        width: 20rem;
+    }
+
+    .carousel .carousel__item img {
+        height: 50vh;
+    }
+}
+
+/*********** Footer ***********/
+footer img.banner {
+    border-top: solid #35C910;
+    border-width: thin;
+    padding-top: 2vh;
+    margin-top: 5vh;
+    width: 100%;
+    height: 12vh;
+}
+
+footer div.container1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.receber-emails {
+    background-color: rgba(87, 87, 87, 0.37);
+    padding-bottom: 1.5vmax;
+    padding-top: 1.5vmax;
+}
+
+.receber-emails h2 {
+    color: white;
+    font-size: 2.5vh;
+    margin-left: 11%;
+    margin-top: 0;
+}
+
+.receber-emails input.footer-nome {
+    margin-left: 11%;
+}
+
+.receber-emails input {
+    height: 4vh;
+    width: 10vw;
+    min-width: 77px;
+    font-size: 2vh;
+    border: none;
+    border-radius: 4px;
+}
+
+.receber-emails input:focus {
+    outline: none;
+}
+
+.footer-enviar{
+    height: 4vh;
+    width: 4vw;
+    min-width: 29px;
+    background-color: #35C910;
+    border: none;
+    border-radius: 4px;
+    font-size: 2vh;
+    cursor: pointer;
+}
+
+footer img.logo-footer {
+    margin-left: 11%;
+    margin-top: 7vh;
+    margin-bottom: 3vh;
+    height: 23vh;
+    width: 21vw;
+}
+
+footer div.container2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer div.footer-info {
+    margin-right: 9%;
+    display: flex;
+}
+
+footer .institucional {
+    margin-right: 20px;
+}
+
+footer div.footer-info ul {
+    list-style: none;
+    font-size: 2vmin;
+    color: white;
+}
+
+footer div.footer-info li{
+    margin-bottom: 2vh;
+}
+
+footer h3 {
+    margin-top: 0;
+    margin-bottom: 4vh;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+/*********** media ***********/
+@media (width: 530px) {
+    footer img.logo-footer {
+        width: 8rem;
+    }
+} 
+.alert{
+    margin-bottom: 0 !important;
+}
