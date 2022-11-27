@@ -1,0 +1,15 @@
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/bin/Debug/net6.0/Backend
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/bin/Debug/net6.0/Backend.deps.json
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/bin/Debug/net6.0/Backend.runtimeconfig.json
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/bin/Debug/net6.0/Backend.dll
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/bin/Debug/net6.0/Backend.pdb
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.csproj.AssemblyReference.cache
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.GeneratedMSBuildEditorConfig.editorconfig
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.AssemblyInfoInputs.cache
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.AssemblyInfo.cs
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.csproj.CoreCompileInputs.cache
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.dll
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/refint/Backend.dll
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.pdb
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/Backend.genruntimeconfig.cache
+/home/serppa/Documentos/Projetos-SENAI/UC15/Backend/obj/Debug/net6.0/ref/Backend.dll
