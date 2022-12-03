@@ -1,15 +1,15 @@
-using Backend.Interfaces;
+using CadastroPessoaBET6.Interfaces;
 
-namespace Backend.Classes
+namespace CadastroPessoaBET6.Classes
 {
     public abstract class Pessoa : IPessoa
     {
-        public string? nome { get; set; }
-
-        public float rendimento { get; set; }
+        public string? Nome { get; set; }
         
-        public string? endereco { get; set; }
+        public float Rendimento { get; set; }
+        
+        public Endereco? Endereco { get; set; }
 
-        public abstract float CalcularImposto(float rendimento);
+        public abstract float PagarImposto(float rendimento);
     }
 }
